@@ -1,0 +1,64 @@
+{
+  "name": "@observer-protocol/wdk-lightning-verifier",
+  "version": "0.1.0-beta.1",
+  "description": "Verifiable Lightning for KYA: preimage proofs, transaction visibility, reputation attribution. Wallet-agnostic.",
+  "keywords": [
+    "lightning",
+    "bolt-11",
+    "preimage",
+    "kya",
+    "know-your-agent",
+    "observer-protocol",
+    "agent-identity",
+    "reputation",
+    "agentic-economy"
+  ],
+  "author": "Observer Protocol, Inc.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/observer-protocol/wdk-lightning-verifier.git"
+  },
+  "homepage": "https://observerprotocol.org",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build:types": "tsc",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:coverage": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
+    "example": "node examples/verify-preimage.mjs"
+  },
+  "dependencies": {
+    "@noble/hashes": "^1.5.0",
+    "bare-node-runtime": "^1.1.4"
+  },
+  "devDependencies": {
+    "cross-env": "10.0.0",
+    "jest": "30.0.5",
+    "standard": "17.1.2",
+    "typescript": "5.8.3"
+  },
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "bare": "./bare.js",
+      "default": "./index.js"
+    },
+    "./package": {
+      "default": "./package.json"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "standard": {
+    "ignore": [
+      "bare.js",
+      "tests/**/*.js",
+      "examples/**/*.mjs"
+    ]
+  }
+}
