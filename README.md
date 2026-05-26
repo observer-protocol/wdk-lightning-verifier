@@ -2,7 +2,7 @@
 
 > Verifiable Lightning for KYA: preimage proofs, transaction visibility, reputation attribution. **Wallet-agnostic.**
 
-**Note**: This package is currently in beta (`0.1.0-beta.1`). The local verification path is production-ready; the three-tier path is a thin wrapper around Observer Protocol's chain verifier (`POST /v1/chain/verify` with `chain="lightning"`) and depends on that endpoint's stability.
+**Note**: This package is currently in beta (`0.1.0-beta.1`). The local verification path is stable and tested; the three-tier path is a thin wrapper around Observer Protocol's chain verifier (`POST /v1/chain/verify` with `chain="lightning"`) and depends on that endpoint's stability.
 
 ---
 
@@ -202,17 +202,11 @@ Returns `{ valid, tier, reputationContribution?, raw?, error? }`.
 
 ---
 
-## Publication status
-
-> This package is in active development. The canonical home is `observer-protocol/wdk-lightning-verifier` (or the personal account fallback during organization access transitions). Once organization access stabilizes, all references will resolve to the canonical org URL.
-
----
-
 ## Links
 
 - **Companion package:** `@observer-protocol/wdk-protocol-trust` — the WDK-shaped surface for agent identity and bilateral handshake
 - **Observer Protocol:** [observerprotocol.org](https://observerprotocol.org)
-- **AIP v0.5 spec (Lightning verification model):** §10 of [AIP v0.5](https://observerprotocol.org/papers/aip-v0.5.pdf)
+- **AIP v0.6 draft spec (Lightning verification model):** §10 of [AIP v0.6 draft](https://github.com/observer-protocol/aip/blob/main/aip-v0.6-draft-1.md)
 - **OP API docs:** [api.observerprotocol.org/docs](https://api.observerprotocol.org/docs)
 - **BOLT-11 spec:** [bolt 11](https://github.com/lightning/bolts/blob/master/11-payment-encoding.md)
 
